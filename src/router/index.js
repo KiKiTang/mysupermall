@@ -28,12 +28,22 @@ const routes = [
   {
     path: '/admin',
     name: 'admin',
-    component:Admin,
+    component: Admin,
     children:[
       {
-        path:'/admin/teacher',
-        name:'teacher',
-        component:()=>('../views/Admin/adminview/Tea.vue'),
+        path:'teacher',
+        name:'admin-teacher',
+        component:()=> import('../views/Admin/adminview/Tea.vue'),
+      },
+      {
+        path: 'student',
+        name: 'admin-student',
+        component: () => import('../views/Admin/adminview/Stu.vue')
+      },
+      {
+        path: 'course',
+        name: 'admin-course',
+        component: () => import('../views/Admin/adminview/Cou.vue')
       }
     ]
   },

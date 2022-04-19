@@ -1,6 +1,6 @@
 <template>
   <div class="tea">
-      <h2>111</h2>
+      教师页面
   </div>
 </template>
 
